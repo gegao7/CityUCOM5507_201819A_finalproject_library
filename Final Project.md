@@ -1,36 +1,14 @@
-#Harvesting and Analyzing the Library Course Reserve
-Entries at City University and CUHK —— In Terms of Communication and Sociology
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Harvesting and Analyzing the Library Course Reserve Entries at City University and CUHK —— In Terms of Communication and Sociology
 
 Qianying YE         55474073
 Xiaomeng ZHANG    55383507
 Yiwen SHI           55455808
 Ge GAO             55376450
-
-
-
-
 		
 Dr. Xinzhi ZHANG
 Dec 10, 2018
  
-##Introduction
+### Introduction
 When Hong Kong university students want to know the bibliography specified in the course they are studying, they may refer to the "course reserve" catalog in the library. A course reserve is a service offered to teaching-staffs to make course-related materials available to students and other users in a one-stop-shop manner. Short loan time (5 hours, 1 day or 3 days) for materials in the course reserve are designated by the teaching staff to expedite circulation and give every student the equal opportunity to borrow the relevant bibliography. Such a service is provided by most libraries in Hong Kong universities. 
 The course reserve is a significant teaching and learning platform in an academic institution with three main reasons. Firstly, this catalog enables the faculties to pick up their favorite books to share with the students or keep other books that they believe to reflect the milestone pieces of an academic discipline. Secondly, students can be benefited from such a catalog so that the important books in the field will be always available. Furthermore, a course reserve partly reflects the curriculum design of the departments or schools, it may also demonstrate the intellectual taste of the faculties.
 Based on the above causes, this study attempts to scrape the entries information of course reservation of communication and sociology of City University of Hong Kong and the Chinese University of Hong Kong (hereafter referred to as CityU and CUHK), as well as perform exploratory data analysis and visualization of the results. 
