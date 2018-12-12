@@ -22,11 +22,11 @@ For subject selection, this study have chosen two subjects of communication and 
 ### 1.3 Research Questions
 Based on the research background and preliminary analysis of relevant data, this study proposes the following three main research questions.
 
-Q1. Is there any same book between the two universities? If yes, what are their similarities and differences? 
+* Is there any same book between the two universities? If yes, what are their similarities and differences? 
 
-Q2. What is the year of the oldest and newest books? Which school's course-reserved books are newer?
+* What is the year of the oldest and newest books? Which school's course-reserved books are newer?
 
-Q3. Is there any author has more than one books have been chosen into course reserve?
+* Is there any author has more than one books have been chosen into course reserve?
 
 Except the above questions, this study decided to explore more. First, by analyzing the amount, year, and theme of the course reserve materials, this study attempts to find out the features of the teaching purposes and the professors' preference. At the same time, the data collected form the library websites can be utilized to compare the difference among the curriculum design, the teaching purpose and the teacher resources between these two universities. Second, by comparing the course-reserved materials of the same subjects in the two university libraries and combining the courses set by the relevant subjects of the two schools, this study can explore the practicality of the library for course learning. Third, the similar course-reserved books provided by the two universities may also reflect the principal needs of market and the changing of media industry, which is also one of the points of interest in this study. Furthermore, since this study compares the subjects with a large disparity in the QS rankings, by analyzing the differences in the course-reserved books, we may be able to find some reasons for this, like curriculum design, teaching purposes.
 
