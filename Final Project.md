@@ -52,7 +52,7 @@ https://julac.hosted.exlibrisgroup.com/primo-explore/search?query=sub,contains,s
 CUHK	https://julac.hosted.exlibrisgroup.com/primo-explore/search?query=sub,contains,communication,OR&query=sub,contains,media,AND&tab=default_tab&search_scope=Course&sortby=rank&vid=CUHK&lang=en_US&mode=advanced&offset=0
 https://julac.hosted.exlibrisgroup.com/primo-explore/search?query=sub,contains,social,OR&query=sub,contains,sociology,AND&tab=default_tab&search_scope=Course&sortby=rank&vid=CUHK&lang=en_US&mode=advanced&offset=0
 
- 
+![](url)https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/1.png
 Figure 1. Select course reserves, subject and enter the keywords.
  
 
