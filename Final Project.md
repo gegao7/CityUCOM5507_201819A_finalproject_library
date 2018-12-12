@@ -52,8 +52,8 @@ https://julac.hosted.exlibrisgroup.com/primo-explore/search?query=sub,contains,s
 CUHK	https://julac.hosted.exlibrisgroup.com/primo-explore/search?query=sub,contains,communication,OR&query=sub,contains,media,AND&tab=default_tab&search_scope=Course&sortby=rank&vid=CUHK&lang=en_US&mode=advanced&offset=0
 https://julac.hosted.exlibrisgroup.com/primo-explore/search?query=sub,contains,social,OR&query=sub,contains,sociology,AND&tab=default_tab&search_scope=Course&sortby=rank&vid=CUHK&lang=en_US&mode=advanced&offset=0
 
-![](url)https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/1.png
-Figure 1. Select course reserves, subject and enter the keywords.
+![](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/1.png)
+<br>Figure 1. Select course reserves, subject and enter the keywords.
  
 
 Figure 2. The information and variables a book contains.
@@ -64,15 +64,15 @@ This research decided to compare the development of communication and sociology 
 Figure 3. This is the picture of Inspect Element.
 
 #### 2.1.3 Procedure
-##### Website structure analysis. 
+#### Website structure analysis. 
 The library websites of the two universities are dynamic websites and have a complicated structure. By reviewing the elements, it seems that the labels of the four variables are highly consistent, which means that the code may not be able to scrape them separately. At the same time, all the information of the whole page can be shown by clicking load more at the bottom of the page.
 
-##### Relevant attempts and basic methods. 
+#### Relevant attempts and basic methods. 
 At first, the easiest way was used to scraped tags and paths to get information, but it failed. Then, we tried to use Jason to crack the URL of the original website to get the new URL, but after Python access, the response was 403, which means that the website does not allow access and this method cannot get information. Under the guidance of Dr. Zhang and the teaching assistant, we finally chose to solve the problem of the load more first. After the entire webpage was completely unfolded, it verified that the method of scraping the label to obtain relevant information can be carried out.
 
 Totally, the method this study take is to first use selenium to automatically open the webpage, then click the load more button to load the entire webpage, scraped the content of the tab and get the information. In the process, the main packages this study use was selenium, beautiful soup, and pandas.
 
-##### Difficulties and solutions. 
+#### Difficulties and solutions. 
 Although some information was collected through the above methods, more problems appeared. First, in the library website of the CityU, some books have multiple versions and information of these books are folded, only the name of the book and the author can be seen in the webpage, there was no detailed version and year. In this case, if we only scraped this page, some books and information would be overlooked. Furthermore, there is a similar label problem this report mentioned earlier. In the initial stage of scraping, the version and publication year of a book are in the same column and cannot be separated.
  
 
