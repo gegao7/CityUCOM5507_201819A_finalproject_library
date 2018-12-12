@@ -52,16 +52,16 @@ https://julac.hosted.exlibrisgroup.com/primo-explore/search?query=sub,contains,s
 CUHK	https://julac.hosted.exlibrisgroup.com/primo-explore/search?query=sub,contains,communication,OR&query=sub,contains,media,AND&tab=default_tab&search_scope=Course&sortby=rank&vid=CUHK&lang=en_US&mode=advanced&offset=0
 https://julac.hosted.exlibrisgroup.com/primo-explore/search?query=sub,contains,social,OR&query=sub,contains,sociology,AND&tab=default_tab&search_scope=Course&sortby=rank&vid=CUHK&lang=en_US&mode=advanced&offset=0
 
-![](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/1.png)
+![Select course reserves, subject and enter the keyword](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/1.png)
 <br>Figure 1. Select course reserves, subject and enter the keywords.
  
-
-Figure 2. The information and variables a book contains.
+![The information and variables a book contains](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/2.png)
+<br>Figure 2. The information and variables a book contains.
 
 This research decided to compare the development of communication and sociology in the two universities based on the information collected. By analyzing the information contained in the website, this research defined the variables to be analyzed, namely the title, author, version and publication year of a book.
  
-
-Figure 3. This is the picture of Inspect Element.
+![This is the picture of Inspect Element](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/3.png)
+<br>Figure 3. This is the picture of Inspect Element.
 
 #### 2.1.3 Procedure
 #### Website structure analysis. 
@@ -75,11 +75,11 @@ Totally, the method this study take is to first use selenium to automatically op
 #### Difficulties and solutions. 
 Although some information was collected through the above methods, more problems appeared. First, in the library website of the CityU, some books have multiple versions and information of these books are folded, only the name of the book and the author can be seen in the webpage, there was no detailed version and year. In this case, if we only scraped this page, some books and information would be overlooked. Furthermore, there is a similar label problem this report mentioned earlier. In the initial stage of scraping, the version and publication year of a book are in the same column and cannot be separated.
  
-
-Figure 4. The book has multiple versions.
+![The book has multiple versions](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/4.png)
+<br>Figure 4. The book has multiple versions.
  
-
-Figure 5. The same label contains different information.
+![The same label contains different information](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/5.png)
+<br>Figure 5. The same label contains different information.
 
 To solve these two main problems, after trying a variety of methods, the solutions was found.
 
@@ -89,11 +89,11 @@ For the second problem, the code to solve it was to use the number to locate the
 
 Honestly speaking, due to the influence of network speed, website instability, etc., the information we obtained has some cases of missing years and titles. This situation only appears in the process of scraping the sociology reservations of City University of Hong Kong. In the case where we have been unable to obtain complete information several times and have determined that the code is correct, we have supplemented the missing data by manual filling.
  
-
-Figure 6. The URLs of each course-reserved book in the field of communication.
+![The URLs of each course-reserved book in the field of communication](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/6.png)
+<br>Figure 6. The URLs of each course-reserved book in the field of communication.
  
-
-Figure 7. Screenshot of part of the course-reserved book of Communication Studies at CityU
+![Screenshot of part of the course-reserved book of Communication Studies at CityU](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/7.png)
+<br>Figure 7. Screenshot of part of the course-reserved book of Communication Studies at CityU.
 
 ### 2.2 Data Processing
 More than one thousand data with four CSV files were scraped totally from library’s websites of CityU and CUHK, and the files contained four columns: title, author, publisher, and publication year. Next, based on our research questions, we explained the procedure of processing data and drawing conclusions from three parts.
@@ -103,36 +103,39 @@ As mentioned above, with scraping the publishers from websites, the command with
 
 Firstly, there were three steps to count the number of course-reserved books in each publication year, including opening, sorting, and counting. The column of “year” was drawn and then sorted values by digital size. In the counting step, a loop command with “for & in” was used to count the number of the same year, which was equal to get the number of publications books in each year. However, for keeping the order of year, the commands were executed in a loop list, resulting in duplicated results as well (showed as Figure 8). Therefore, the research planned to save it as a CSV file and proceed to the next step of data processing.
 
-  
-Figure 8. The codes of counting the number of books in each year.
+![The codes of counting the number of books in each year](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/8.png) 
+<br>Figure 8. The codes of counting the number of books in each year.
 
 The second step was to drop the duplicate content in the file. An easy command with pandas could achieve the goal, but before this operation, a kind of data cleaning must be handled. Because under the automatic generation of serial numbers, the data of each row was no longer the same so Python could not recognize duplicate content for deletion. Therefore, the deletion of the first column was necessary and the data processing of each subject in each university was completed (showed as Figure 9). Four new CSV files were produced by Python.
  
-
-Figure 9. The codes of deleting the duplicated data.
+![The codes of deleting the duplicated data](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/9.png)
+<br>Figure 9. The codes of deleting the duplicated data.
 
 Finally, the last step was from processing to visualization. For comparing the annual quantity of books in two universities, the graphic of double-bar was a better choice. However, before generating a chart by Python, there were two significant processing that must be operated. In the beginning, after importing data of the same subject, a new dictionary should be merged in the way of union rather than intersection depending on the common variable “year”. Just as shown in Figure 9, if CityU had no books that published in 1966 but CUHK has one, “NaN” which meant not a number would be picked up in the blank. Since the order of the merger was based on the column of the first file, i.e. the publication year of CUHK, as mentioned in Figure 10, the years that CityU had books but CUHK has nothing were arranged at the end, which was not conducive to visualize. So another sorted command should be drawn, the final nice figure was generated by Python (showed as Figure 11)
 
-  
-Figure 10. The codes of merging data.       Figure 11. The problem of merging data.
+![The codes of merging data](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/10.png) 
+<br>Figure 10. The codes of merging data.
 
- 
-Figure 12. The visualization pf publication years.
+![The problem of merging data](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/11.png)
+<br>Figure 11. The problem of merging data.
+
+ ![The visualization pf publication years](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/12.png)
+ <br>Figure 12. The visualization pf publication years.
 
 #### 2.2.2 The keywords of titles
 From our perspective, the title of course-reserved books can directly show the emphasis of courses in CityU and CUHK. With the scarping of books’ titles, the research draws the keywords of them and shows the statistics results, revealing as Figures of World Cloud.
 
 There were three necessary data processing before visualization. Firstly, the words from titles need to be removed from stop words, which including “and”, “or”, “this” and so on. But as cleaned for the first time, it was found that punctuations were not dropped, causing the most frequency keywords is the colon. Then a list of commonly used punctuations was added to the package of stop words and complete the first cleaning step (showed as Figure 13).
 
- 
-Figure 13. The codes of deleting stop words.
+![The codes of deleting stop words](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/13.png) 
+<br>Figure 13. The codes of deleting stop words.
 
 The second step is to count the repeated keywords. However, the capitals and lower letters are not unified which will cause counting in a mistake. An easy loop command was used and a new list that contained all lower letters was created. This new list was prepared to be saved as txt file, which was the material for visualization. In addition, it is necessary to count the keywords in the new list with the same method as the processing of publication year. After sorting the keywords by the number of them, an ascending order occurred and although the most frequency words could be seen at the end of the queue, all the accurate and clear outcomes was born.
 
 The last step is to generate figures of Word Cloud by installing a package in Python. With the tutorial online, nice Word Cloud was successfully made, especially making the user-defined font, background, color, shape and so on. Two universities logos were chosen as the shape and color of Word Cloud to add features and help to contrast clearly (showed as Figure 14).
  
-
-Figure 14. The codes of generating Word Clouds.
+![The codes of generating Word Clouds](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/14.png)
+<br>Figure 14. The codes of generating Word Clouds.
 
 #### 2.2.3 The overlapping books of CityU and CUHK
 The third part of data processing was the most challenging and difficult for the research, although it looked like the simplest one. And frankly speaking, it did not complete in the end.
@@ -141,53 +144,47 @@ The last goal was to compare the same books with the same subject of two univers
 
 Initially, the column of titles was drawn by importing the CSV file and found the overlapping book through the loop command. Unfortunately, there was a big problem in the second step. Although the information of the overlapping book was found in the respective CSV source files of CityU and CUHK, it could not be converted into a complete form. It can only be displayed in Python as shown in Figure 15, and the displayed content was also confusing. The outcome was tried to export the CSV files directly, but only the last row of data could be displayed. After searching online, it could be guessed that the loop covers the previous one, but our group had not solved this problem after a long period of effort.
   
-
-Figure 15. The codes of searching the same information.
+![The codes of searching the same information](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/15.png)
+<br>Figure 15. The codes of searching the same information.
 
 Then after searching a lot online and asking somebody who majored in computer science, the tutor guided another way with the concept of defaultdict. In fact, defaultdict is a dictionary as well, but Python automatically assigns an initial value to its key then it can reduce errors. Our tutor helped us to define a command with two steps of finding and collecting, and finally export in one CSV files with all information. The whole codes were clearly for understood but a little difficult for us to write (showed as Figure 16). Furthermore, a step of data cleaning was included in the entire codes, dropping the index and the headline.
 
 To sum up, while some processing the research had not achieved absolutely, most of them were completed in our efforts. And it is believed that our group will be more and more skilled at Python and solve the problems we did not solve today.
  
-
-Figure 16. The entire codes of finding overlapping books by the tutor.
+![The entire codes of finding overlapping books by the tutor](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/16.png)
+<br>Figure 16. The entire codes of finding overlapping books by the tutor.
 
 ## Results
 Based on the data acquired from the websites, the differences between the course reserve materials from City University and CUHK are obvious.
 
 Firstly, overall speaking, there is a considerable difference in the number of total course reserve books from both the communication section and the sociology section between these two universities. CityU has 337 volumes of communication-related reserve books and 53 volumes of sociology related reserve books, while CUHK has 532 reserve books of communication section and 132 reserve books of sociology section. The total amount of books from CUHK is about twice as much as the number of books from CityU. But from table 1 below, it indicates that each teaching staff of CityU in communication has 6.2 course reserve books. Even though there are fewer reserve books of sociology section in CityU library, the mean amount of reserve books for each teaching stuff is about the same with which of CUHK.
 
-Table 2. The overall analysis about course reserve books
-Communication
-	Total	Teaching staff	Books for each staff
-CityU	337	54	6.2
-CUHK	532	40	13.3
-
-Sociology
-	Total	Teaching staff	Books for each staff
-CityU	53	17	3.1
-CUHK	132	36	3.7
+Table 2. The overall analysis about course reserve books<br>
+![The overall analysis about course reserve books](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/table2.png)
 
 Then, the editions of the same books were compared by searching the same book titles. Due to different curriculum setting, there are only a few overlapping books of these two subjects between these two universities. There are 24 overlapping books in sociology section and only 3 overlapping books in the communication section. In general, the course reserve books from CityU library mainly cover only one edition, usually the newer edition. As for books from CUHK library, there is usually more than one edition, including one newest edition and older editions. These editions collected by CityU library are also collected by the CUHK library. 
 
 Furthermore, according to the course setting, the courses of City university tend to focus more on the newest research fields, so we supposed that the reserve books of CityU library are published later than those of CUHK library. 
 
+Table 3. The number of books of communication science in every publishing year<br>
+![The number of books of communication science in every publishing year](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/table3.png) 
 
-Table 3. The number of books of communication science in every publishing year
- 
+Table 4. The number of books of sociology in every publishing year<br>
+![The number of books of sociology in every publishing year](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/table4.png)
 
-Table 4. The number of books of sociology in every publishing year
- 
 From Table3 and Table4, it's obvious that in terms of the larger total amount, the publish year of the reserve books in CUHK distribute wider. As for course reserve books related to the communication field, the publishing years of the books in CityU range from 1990, while the publishing years of the books in CUHK range from 1966. There are 7 volumes of books of CUHK in communication filed published before 1990. In sociology field, the publishing years of the reserve books in CityU mainly covers later from 1980, while in CUHK from 1931. There are 10 course reserve books published before 1980 in sociology field collected by CityU library, while there are 27 books collected by CUHK library. There is no evidence to prove that the reserve books of CityU library are newer than those of CUHK library, but the collections in CityU library are published mainly in the recent decades.
 
 Besides, top ten most commonly appearing words in the book titles were discovered in these two subjects of each university. The top title words in the communication-related reserves books in CityU are communication, media, marketing, communications, guide, mass, technology, integrated, research, human and culture; in CUHK are language, communication, legal, writing, acquisition, cultural, introduction, culture, studies, and guide.  The word clouds show that there are many common issues discussed in the reserve books, such as mass communication and cultural phenomenon. But the differences are also obvious. The courses of communication subject in CUHK covers more language acquisition and writing, while CityU focuses more on practical issues about integrated marketing.
   
-
-Figure18. The word clouds of book titles in communication field of two universities.
+![The word clouds of book titles in communication field of two universities](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/18-1.png)
+![The word clouds of book titles in communication field of two universities](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/18-2.png)
+<br>Figure18. The word clouds of book titles in communication field of two universities.
 
 As for reserve books of sociology, there are some similar words commonly appearing in the titles, such as society, research, political and so on. However, the courses of sociology in CUHK focus more on the social works on the macro level (Hong Kong and China etc.); in contrast, sociology courses in CityU emphasis more on the issues about social communities.
   
-
-Figure19. The word clouds of book titles in sociology field of two universities.
+![The word clouds of book titles in sociology field of two universities](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/19-1.png)
+![The word clouds of book titles in sociology field of two universities](https://github.com/gegao7/CityUCOM5507_201819A_finalproject_library/blob/master/Harvesting%20and%20Analyzing%20the%20Library%20Course%20ReserveEntries%20at%20City%20University%20and%20CUHK%20%E2%80%94%E2%80%94%20In%20Terms%20of%20Communication%20and%20Sociology/19-2.png)
+<br>Figure19. The word clouds of book titles in sociology field of two universities.
 
 ## Conclusions and Implications
 We collected the data of reserve books by searching the keywords and analyzed the basic information of all the books to see the similarities and differences of the reserve books of these two universities, then to find out the differences of the curriculum design.
