@@ -1,4 +1,4 @@
-## Harvesting and Analyzing the Library Course Reserve Entries at City University and CUHK —— In Terms of Communication and Sociology
+# Harvesting and Analyzing the Library Course Reserve Entries at City University and CUHK —— In Terms of Communication and Sociology
 
 55474073 Qianying YE<br>55383507 Xiaomeng ZHANG<br>55455808 Yiwen SHI<br>55376450 Ge GAO             
 
@@ -6,20 +6,20 @@ Dr. Xinzhi ZHANG
 
 Dec 10, 2018
  
-### Introduction
+## Introduction
 When Hong Kong university students want to know the bibliography specified in the course they are studying, they may refer to the "course reserve" catalog in the library. A course reserve is a service offered to teaching-staffs to make course-related materials available to students and other users in a one-stop-shop manner. Short loan time (5 hours, 1 day or 3 days) for materials in the course reserve are designated by the teaching staff to expedite circulation and give every student the equal opportunity to borrow the relevant bibliography. Such a service is provided by most libraries in Hong Kong universities. 
 
 The course reserve is a significant teaching and learning platform in an academic institution with three main reasons. First, this catalog enables the faculties to pick up their favorite books to share with the students or keep other books that they believe to reflect the milestone pieces of an academic discipline. Second, students can be benefited from such a catalog so that the important books in the field will be always available. Furthermore, a course reserve partly reflects the curriculum design of the departments or schools, it may also demonstrate the intellectual taste of the faculties.
 
 Based on the above causes, this study attempts to scrape the course-reserved entries of communication and sociology of City University of Hong Kong and the Chinese University of Hong Kong (hereafter referred to as CityU and CUHK), as well as perform exploratory data analysis and visualization of the results. 
 
-#### 1.1 School Choices: CityU and CUHK
+### 1.1 School Choices: CityU and CUHK
 As CityU and CUHK located in Hong Kong with the same social background, the data collected from these two universities are more comparable. Meanwhile, after analyzing the library websites of the eight universities in Hong Kong, we found that the libraries of the CityU and the CUHK have the same website structure and the same operability so that the information comparison can be avoided because of the search error. 
 
-#### 1.2 Subject Choice: Communication and Sociology
+### 1.2 Subject Choice: Communication and Sociology
 For subject selection, we have chosen two subjects of communication and sociology. Firstly, as students of the Department of Media and Communication, we have an advantage in the analysis of the subject of communication. There are many intersections between sociology and communication, so we also know more about it and facilitate us to process information. Secondly, we searched the rankings of the two subjects in QS in recent years and found that the ranks of communication of the two universities are relatively close, while the gap of ranks in sociology rankings are larger. Through such a distinction, we believe that the similar rankings of the same subjects and the different rankings of the same discipline are more representative. 
 
-#### 1.3 Research Questions
+### 1.3 Research Questions
 Based on the research background and preliminary analysis of relevant data, this study proposes the following three main research questions.
 
 Q1. Is there any same book between the two universities? If yes, what are their similarities and differences? 
@@ -30,12 +30,12 @@ Q3. Is there any author has more than one books have been chosen into course res
 
 Except the above questions, this study decided to explore more. First, by analyzing the amount, year, and theme of the course reserve materials, this study attempts to find out the features of the teaching purposes and the professors' preference. At the same time, the data collected form the library websites can be utilized to compare the difference among the curriculum design, the teaching purpose and the teacher resources between these two universities. Second, by comparing the course-reserved materials of the same subjects in the two university libraries and combining the courses set by the relevant subjects of the two schools, this study can explore the practicality of the library for course learning. Third, the similar course-reserved books provided by the two universities may also reflect the principal needs of market and the changing of media industry, which is also one of the points of interest in this study. Furthermore, since this study compares the subjects with a large disparity in the QS rankings, by analyzing the differences in the course-reserved books, we may be able to find some reasons for this, like curriculum design, teaching purposes.
 
-### Methods
-#### 2.1 Data Acquisition
-##### 2.1.1 Date Source
+## Methods
+### 2.1 Data Acquisition
+#### 2.1.1 Date Source
 The source of the data is the library website of CityU and CUHK. There are two main reasons for choosing these two sites as our target sites. First, the two sites have similar architectures so that the similar code can be used to process both sites simultaneously. Second, the content contained in the two sites is comparable because the same search method is utilized to get information.
 
-##### 2.1.2 Variables to be collected 
+#### 2.1.2 Variables to be collected 
 Since the libraries of the two universities do not directly provide all the course reserves in the two subjects of communication and sociology, this study roughly searched the relevant course reserves contained by each two keywords according to the name of the subject and the nouns mentioned in the field, this can represent the course reserves of the two subjects to a considerable extent. At the same time, to ensure comparability, the same method of searching was conducted for getting the final URL.
 
 The first step was open the official library websites of the two universities and choose the course reserves to retain this option. Next, selected the subject at the search criteria, enter communication and media separately, so that the engine can search for the subject containing these two nouns at the same time, which is the keyword of the course reserves of search communication. This research uses the same method to search for course reserves roughly included in the subject of sociology in two universities. Social and society are our search keywords. In the end, four URLs containing the relevant information was gained.
@@ -63,16 +63,16 @@ This research decided to compare the development of communication and sociology 
 
 Figure 3. This is the picture of Inspect Element.
 
-##### 2.1.3 Procedure
-###### Website structure analysis. 
+#### 2.1.3 Procedure
+##### Website structure analysis. 
 The library websites of the two universities are dynamic websites and have a complicated structure. By reviewing the elements, it seems that the labels of the four variables are highly consistent, which means that the code may not be able to scrape them separately. At the same time, all the information of the whole page can be shown by clicking load more at the bottom of the page.
 
-###### Relevant attempts and basic methods. 
+##### Relevant attempts and basic methods. 
 At first, the easiest way was used to scraped tags and paths to get information, but it failed. Then, we tried to use Jason to crack the URL of the original website to get the new URL, but after Python access, the response was 403, which means that the website does not allow access and this method cannot get information. Under the guidance of Dr. Zhang and the teaching assistant, we finally chose to solve the problem of the load more first. After the entire webpage was completely unfolded, it verified that the method of scraping the label to obtain relevant information can be carried out.
 
 Totally, the method this study take is to first use selenium to automatically open the webpage, then click the load more button to load the entire webpage, scraped the content of the tab and get the information. In the process, the main packages this study use was selenium, beautiful soup, and pandas.
 
-###### Difficulties and solutions. 
+##### Difficulties and solutions. 
 Although some information was collected through the above methods, more problems appeared. First, in the library website of the CityU, some books have multiple versions and information of these books are folded, only the name of the book and the author can be seen in the webpage, there was no detailed version and year. In this case, if we only scraped this page, some books and information would be overlooked. Furthermore, there is a similar label problem this report mentioned earlier. In the initial stage of scraping, the version and publication year of a book are in the same column and cannot be separated.
  
 
@@ -95,10 +95,10 @@ Figure 6. The URLs of each course-reserved book in the field of communication.
 
 Figure 7. Screenshot of part of the course-reserved book of Communication Studies at CityU
 
-#### 2.2 Data Processing
+### 2.2 Data Processing
 More than one thousand data with four CSV files were scraped totally from library’s websites of CityU and CUHK, and the files contained four columns: title, author, publisher, and publication year. Next, based on our research questions, we explained the procedure of processing data and drawing conclusions from three parts.
 
-##### 2.2.1 The publication year
+#### 2.2.1 The publication year
 As mentioned above, with scraping the publishers from websites, the command with “if & else” was used to get the publication year. Then, through the statistics of the number of books in each publication year, the research planned to analyze the current situation of course-reserved books in CityU and CUHK.
 
 Firstly, there were three steps to count the number of course-reserved books in each publication year, including opening, sorting, and counting. The column of “year” was drawn and then sorted values by digital size. In the counting step, a loop command with “for & in” was used to count the number of the same year, which was equal to get the number of publications books in each year. However, for keeping the order of year, the commands were executed in a loop list, resulting in duplicated results as well (showed as Figure 8). Therefore, the research planned to save it as a CSV file and proceed to the next step of data processing.
@@ -119,7 +119,7 @@ Figure 10. The codes of merging data.       Figure 11. The problem of merging da
  
 Figure 12. The visualization pf publication years.
 
-##### 2.2.2 The keywords of titles
+#### 2.2.2 The keywords of titles
 From our perspective, the title of course-reserved books can directly show the emphasis of courses in CityU and CUHK. With the scarping of books’ titles, the research draws the keywords of them and shows the statistics results, revealing as Figures of World Cloud.
 
 There were three necessary data processing before visualization. Firstly, the words from titles need to be removed from stop words, which including “and”, “or”, “this” and so on. But as cleaned for the first time, it was found that punctuations were not dropped, causing the most frequency keywords is the colon. Then a list of commonly used punctuations was added to the package of stop words and complete the first cleaning step (showed as Figure 13).
@@ -134,7 +134,7 @@ The last step is to generate figures of Word Cloud by installing a package in Py
 
 Figure 14. The codes of generating Word Clouds.
 
-##### 2.2.3 The overlapping books of CityU and CUHK
+#### 2.2.3 The overlapping books of CityU and CUHK
 The third part of data processing was the most challenging and difficult for the research, although it looked like the simplest one. And frankly speaking, it did not complete in the end.
 
 The last goal was to compare the same books with the same subject of two universities. To achieve, there were two steps that need to capture. Firstly, finding the same books while secondly, drawing the same books with other information, containing authors and publishers.
@@ -151,7 +151,7 @@ To sum up, while some processing the research had not achieved absolutely, most 
 
 Figure 16. The entire codes of finding overlapping books by the tutor.
 
-### Results
+## Results
 Based on the data acquired from the websites, the differences between the course reserve materials from City University and CUHK are obvious.
 
 Firstly, overall speaking, there is a considerable difference in the number of total course reserve books from both the communication section and the sociology section between these two universities. CityU has 337 volumes of communication-related reserve books and 53 volumes of sociology related reserve books, while CUHK has 532 reserve books of communication section and 132 reserve books of sociology section. The total amount of books from CUHK is about twice as much as the number of books from CityU. But from table 1 below, it indicates that each teaching staff of CityU in communication has 6.2 course reserve books. Even though there are fewer reserve books of sociology section in CityU library, the mean amount of reserve books for each teaching stuff is about the same with which of CUHK.
@@ -189,7 +189,7 @@ As for reserve books of sociology, there are some similar words commonly appeari
 
 Figure19. The word clouds of book titles in sociology field of two universities.
 
-### Conclusions and Implications
+## Conclusions and Implications
 We collected the data of reserve books by searching the keywords and analyzed the basic information of all the books to see the similarities and differences of the reserve books of these two universities, then to find out the differences of the curriculum design.
 
 In all, firstly compared with CUHK, City University is slightly inferior in the scale and amount of university library collection. CUHK provides students with more kinds of books and more different editions of the books. For a wide range of reasons, the scale of City University library is relatively smaller, so there is not much space for lecturers to recommend more reserve books. However, since students can borrow the books from other university libraries online as JULAC card holders, their academic needs can be almost totally satisfied.
@@ -198,7 +198,7 @@ Secondly, by deep analysis of the book titles, it can be concluded that the stru
 
 Compared with the traditional courses related to communication science still concentrating on the traditional media, in the recent years, City University has established new streams, such as Media Data Analytics Stream, and a series of courses aiming at providing knowledge about cutting-edge media technologies for professionals working in the communication science fields. But in fact, when we analyzed the titles of the books, we found that there are not enough books relevant to the advanced communication science studies in the list. Thus, the relevant reserve books list should be updated and some books about new media, advanced media technologies can be added to the list. Although the classic works should be attached much importance to, students also need to obtain more knowledge from some newer aspects.
 
-### Limitations
+## Limitations
 
 Due to the lack of technical competence, there are some limitations of this study. 
 
@@ -206,7 +206,7 @@ First, the data sources of this study are not comprehensive. This study only cho
 
 Second, the processing of the data is not deep enough. That is why this study did not make use of the information which we have scraped from the websites. This study did not figure out how to collect information about publishing countries of the books from author names and publishers. If this problem can be solved, this study can find more points that can be analyzed and compared of the course-reserved books between these two universities.
  
-### Reference
+## References
 The online tutorials we used:
 1.	https://blog.csdn.net/qq284489030/article/details/79507161
 2.	https://www.cnblogs.com/duyang/p/5065418.html
